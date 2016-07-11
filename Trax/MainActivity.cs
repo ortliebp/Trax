@@ -14,6 +14,7 @@ namespace Trax
 			base.OnCreate(savedInstanceState);
 
 			// Set our view from the "main" layout resource
+
 			SetContentView(Resource.Layout.Main);
 
 			// Get our button from the layout resource,
