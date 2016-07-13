@@ -24,15 +24,7 @@ namespace Trax
 
 			// Get our UI controls from the loaded layout
 			Button helloButton = FindViewById<Button>(Resource.Id.HelloWorldButton);
-
-			// Set spinner selector from "Main" layout resource
-			Spinner dsstSpinner = FindViewById<Spinner>(Resource.Id.action_bar_spinner);
-			dsstSpinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-			var adapter = ArrayAdapter.CreateFromResource (
-				this, Resource.Array.DSST_list, Android.Resource.Layout.SimpleSpinnerItem); //<----------- ERROR: Resource.Array??? 
-			
-			adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-			dsstSpinner.Adapter = adapter;
+			//Button newButton = FindViewById<Button>(Resource.Id.newButton);
 
 			helloButton.Click += (object sender, EventArgs e) =>
 				{
@@ -40,31 +32,6 @@ namespace Trax
 					
 
 				};
-			//------------- Old Premade code -------- //
-			//		protected override void OnCreate(Bundle savedInstanceState)
-			//		{
-			//			base.OnCreate(savedInstanceState);
-
-			//			// Set our view from the "main" layout resource
-			//			//contributor test1
-			//			SetContentView(Resource.Layout.Main);
-
-			//			// Get our button from the layout resource,
-			//			// and attach an event to it
-			//			Button button = FindViewById<Button>(Resource.Id.myButton);
-
-			//			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
-			//		}
-			//	}
-			//}  
-			// --------------------------------------------------------------- //
-		}
-		private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-		{
-			Spinner spinner = (Spinner)sender;
-
-			string toast = string.Format("The planet is {0}", spinner.GetItemAtPosition(e.Position));
-			Toast.MakeText(this, toast, ToastLength.Long).Show();
 		}
 	}
 }

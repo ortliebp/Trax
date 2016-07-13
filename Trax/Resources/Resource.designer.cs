@@ -71,6 +71,22 @@ namespace Trax
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f0d0000
+			public const int DSST_list = 2131558400;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -1501,9 +1517,6 @@ namespace Trax
 			// aapt resource value: 0x7f0c001c
 			public const int collapseActionView = 2131492892;
 			
-			// aapt resource value: 0x7f0c0052
-			public const int consultantSelector = 2131492946;
-			
 			// aapt resource value: 0x7f0c0031
 			public const int contentPanel = 2131492913;
 			
@@ -1639,9 +1652,6 @@ namespace Trax
 			// aapt resource value: 0x7f0c004e
 			public const int search_voice_btn = 2131492942;
 			
-			// aapt resource value: 0x7f0c0051
-			public const int selectConText = 2131492945;
-			
 			// aapt resource value: 0x7f0c004f
 			public const int select_dialog_listview = 2131492943;
 			
@@ -1659,6 +1669,9 @@ namespace Trax
 			
 			// aapt resource value: 0x7f0c002c
 			public const int spacer = 2131492908;
+			
+			// aapt resource value: 0x7f0c0052
+			public const int spinner1 = 2131492946;
 			
 			// aapt resource value: 0x7f0c0007
 			public const int split_action_bar = 2131492871;
@@ -1689,6 +1702,9 @@ namespace Trax
 			
 			// aapt resource value: 0x7f0c0034
 			public const int textSpacerNoButtons = 2131492916;
+			
+			// aapt resource value: 0x7f0c0051
+			public const int textView1 = 2131492945;
 			
 			// aapt resource value: 0x7f0c0059
 			public const int time = 2131492953;
@@ -1834,40 +1850,43 @@ namespace Trax
 			public const int Main = 2130968601;
 			
 			// aapt resource value: 0x7f04001a
-			public const int notification_media_action = 2130968602;
+			public const int NewLayout = 2130968602;
 			
 			// aapt resource value: 0x7f04001b
-			public const int notification_media_cancel_action = 2130968603;
+			public const int notification_media_action = 2130968603;
 			
 			// aapt resource value: 0x7f04001c
-			public const int notification_template_big_media = 2130968604;
+			public const int notification_media_cancel_action = 2130968604;
 			
 			// aapt resource value: 0x7f04001d
-			public const int notification_template_big_media_narrow = 2130968605;
+			public const int notification_template_big_media = 2130968605;
 			
 			// aapt resource value: 0x7f04001e
-			public const int notification_template_lines = 2130968606;
+			public const int notification_template_big_media_narrow = 2130968606;
 			
 			// aapt resource value: 0x7f04001f
-			public const int notification_template_media = 2130968607;
+			public const int notification_template_lines = 2130968607;
 			
 			// aapt resource value: 0x7f040020
-			public const int notification_template_part_chronometer = 2130968608;
+			public const int notification_template_media = 2130968608;
 			
 			// aapt resource value: 0x7f040021
-			public const int notification_template_part_time = 2130968609;
+			public const int notification_template_part_chronometer = 2130968609;
 			
 			// aapt resource value: 0x7f040022
-			public const int select_dialog_item_material = 2130968610;
+			public const int notification_template_part_time = 2130968610;
 			
 			// aapt resource value: 0x7f040023
-			public const int select_dialog_multichoice_material = 2130968611;
+			public const int select_dialog_item_material = 2130968611;
 			
 			// aapt resource value: 0x7f040024
-			public const int select_dialog_singlechoice_material = 2130968612;
+			public const int select_dialog_multichoice_material = 2130968612;
 			
 			// aapt resource value: 0x7f040025
-			public const int support_simple_spinner_dropdown_item = 2130968613;
+			public const int select_dialog_singlechoice_material = 2130968613;
+			
+			// aapt resource value: 0x7f040026
+			public const int support_simple_spinner_dropdown_item = 2130968614;
 			
 			static Layout()
 			{
@@ -1897,6 +1916,9 @@ namespace Trax
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f060016
+			public const int DSST_prompt = 2131099670;
 			
 			// aapt resource value: 0x7f060000
 			public const int abc_action_bar_home_description = 2131099648;
