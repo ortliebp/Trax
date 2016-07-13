@@ -7,21 +7,16 @@ namespace Trax
 	[Activity(Label = "Trax", MainLauncher = true, Icon = "@mipmap/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
 			base.OnCreate(savedInstanceState);
 
-			// Set our view from the "main" layout resource
-			//contributor test1
 			SetContentView(Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button>(Resource.Id.myButton);
-
-			button.Click += delegate { button.Text = string.Format("{0} clicks!", count++); };
+			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
+			settings.Click += delegate {
+				StartActivity(typeof(whoAreYourPrompt));
+			};
 		}
 	}
 }
