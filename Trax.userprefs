@@ -1,7 +1,7 @@
 ﻿<Properties StartupItem="Trax/Trax.csproj">
   <MonoDevelop.Ide.Workbench ActiveDocument="Trax/MainActivity.cs">
     <Files>
-      <File FileName="Trax/MainActivity.cs" Line="20" Column="26" />
+      <File FileName="Trax/MainActivity.cs" Line="12" Column="62" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -9,5 +9,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Trax PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.Trax AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
 </Properties>

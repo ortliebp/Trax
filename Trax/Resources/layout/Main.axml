@@ -1,4 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
-	<Button android:id="@+id/myButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/hello" />
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/linearLayout">
+        <Button
+            android:text="New"
+            android:layout_width="match_parent"
+            android:layout_height="265.5dp"
+            android:id="@+id/newButton"
+            android:textSize="50dp"
+            android:background="#ff2e7d32" />
+        <Button
+            android:text="View"
+            android:layout_width="match_parent"
+            android:layout_height="237.0dp"
+            android:id="@+id/viewButton"
+            android:textSize="50dp"
+            android:background="#ff455a64" />
+        <Button
+            android:text="Settings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/settingsButton"
+            android:background="#ff37474f" />
+    </LinearLayout>
 </LinearLayout>

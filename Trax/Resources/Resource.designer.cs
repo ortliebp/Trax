@@ -1426,8 +1426,8 @@ namespace Trax
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c0051
-			public const int action0 = 2131492945;
+			// aapt resource value: 0x7f0c0054
+			public const int action0 = 2131492948;
 			
 			// aapt resource value: 0x7f0c0041
 			public const int action_bar = 2131492929;
@@ -1453,8 +1453,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c0042
 			public const int action_context_bar = 2131492930;
 			
-			// aapt resource value: 0x7f0c0055
-			public const int action_divider = 2131492949;
+			// aapt resource value: 0x7f0c0058
+			public const int action_divider = 2131492952;
 			
 			// aapt resource value: 0x7f0c0002
 			public const int action_menu_divider = 2131492866;
@@ -1486,17 +1486,20 @@ namespace Trax
 			// aapt resource value: 0x7f0c002b
 			public const int buttonPanel = 2131492907;
 			
-			// aapt resource value: 0x7f0c0052
-			public const int cancel_action = 2131492946;
+			// aapt resource value: 0x7f0c0055
+			public const int cancel_action = 2131492949;
 			
 			// aapt resource value: 0x7f0c0039
 			public const int checkbox = 2131492921;
 			
-			// aapt resource value: 0x7f0c0058
-			public const int chronometer = 2131492952;
+			// aapt resource value: 0x7f0c005b
+			public const int chronometer = 2131492955;
 			
 			// aapt resource value: 0x7f0c001c
 			public const int collapseActionView = 2131492892;
+			
+			// aapt resource value: 0x7f0c0062
+			public const int confirmButton = 2131492962;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int contentPanel = 2131492913;
@@ -1522,8 +1525,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c0019
 			public const int end = 2131492889;
 			
-			// aapt resource value: 0x7f0c005d
-			public const int end_padder = 2131492957;
+			// aapt resource value: 0x7f0c0060
+			public const int end_padder = 2131492960;
 			
 			// aapt resource value: 0x7f0c0025
 			public const int expand_activities_button = 2131492901;
@@ -1546,14 +1549,17 @@ namespace Trax
 			// aapt resource value: 0x7f0c0026
 			public const int image = 2131492902;
 			
-			// aapt resource value: 0x7f0c005c
-			public const int info = 2131492956;
+			// aapt resource value: 0x7f0c005f
+			public const int info = 2131492959;
 			
-			// aapt resource value: 0x7f0c0056
-			public const int line1 = 2131492950;
+			// aapt resource value: 0x7f0c0059
+			public const int line1 = 2131492953;
 			
-			// aapt resource value: 0x7f0c005a
-			public const int line3 = 2131492954;
+			// aapt resource value: 0x7f0c005d
+			public const int line3 = 2131492957;
+			
+			// aapt resource value: 0x7f0c0050
+			public const int linearLayout = 2131492944;
 			
 			// aapt resource value: 0x7f0c0009
 			public const int listMode = 2131492873;
@@ -1561,8 +1567,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c0028
 			public const int list_item = 2131492904;
 			
-			// aapt resource value: 0x7f0c0054
-			public const int media_actions = 2131492948;
+			// aapt resource value: 0x7f0c0057
+			public const int media_actions = 2131492951;
 			
 			// aapt resource value: 0x7f0c001a
 			public const int middle = 2131492890;
@@ -1570,11 +1576,14 @@ namespace Trax
 			// aapt resource value: 0x7f0c0013
 			public const int multiply = 2131492883;
 			
-			// aapt resource value: 0x7f0c0050
-			public const int myButton = 2131492944;
+			// aapt resource value: 0x7f0c0061
+			public const int namePrompt = 2131492961;
 			
 			// aapt resource value: 0x7f0c001e
 			public const int never = 2131492894;
+			
+			// aapt resource value: 0x7f0c0051
+			public const int newButton = 2131492945;
 			
 			// aapt resource value: 0x7f0c000e
 			public const int none = 2131492878;
@@ -1639,6 +1648,9 @@ namespace Trax
 			// aapt resource value: 0x7f0c004f
 			public const int select_dialog_listview = 2131492943;
 			
+			// aapt resource value: 0x7f0c0053
+			public const int settingsButton = 2131492947;
+			
 			// aapt resource value: 0x7f0c003a
 			public const int shortcut = 2131492922;
 			
@@ -1666,8 +1678,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c0017
 			public const int src_over = 2131492887;
 			
-			// aapt resource value: 0x7f0c0053
-			public const int status_bar_latest_event_content = 2131492947;
+			// aapt resource value: 0x7f0c0056
+			public const int status_bar_latest_event_content = 2131492950;
 			
 			// aapt resource value: 0x7f0c004c
 			public const int submit_area = 2131492940;
@@ -1675,17 +1687,17 @@ namespace Trax
 			// aapt resource value: 0x7f0c000b
 			public const int tabMode = 2131492875;
 			
-			// aapt resource value: 0x7f0c005b
-			public const int text = 2131492955;
+			// aapt resource value: 0x7f0c005e
+			public const int text = 2131492958;
 			
-			// aapt resource value: 0x7f0c0059
-			public const int text2 = 2131492953;
+			// aapt resource value: 0x7f0c005c
+			public const int text2 = 2131492956;
 			
 			// aapt resource value: 0x7f0c0034
 			public const int textSpacerNoButtons = 2131492916;
 			
-			// aapt resource value: 0x7f0c0057
-			public const int time = 2131492951;
+			// aapt resource value: 0x7f0c005a
+			public const int time = 2131492954;
 			
 			// aapt resource value: 0x7f0c002a
 			public const int title = 2131492906;
@@ -1701,6 +1713,9 @@ namespace Trax
 			
 			// aapt resource value: 0x7f0c0012
 			public const int useLogo = 2131492882;
+			
+			// aapt resource value: 0x7f0c0052
+			public const int viewButton = 2131492946;
 			
 			// aapt resource value: 0x7f0c001f
 			public const int withText = 2131492895;
@@ -1862,6 +1877,9 @@ namespace Trax
 			
 			// aapt resource value: 0x7f040025
 			public const int support_simple_spinner_dropdown_item = 2130968613;
+			
+			// aapt resource value: 0x7f040026
+			public const int whoAreYouLayout = 2130968614;
 			
 			static Layout()
 			{
