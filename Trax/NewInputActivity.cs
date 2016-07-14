@@ -19,7 +19,7 @@ namespace Trax
 		{
 			base.OnCreate(savedInstanceState);
 
-			SetContentView(Resource.Layout.NewLayout);
+			SetContentView(Resource.Layout.NewInputLayout);
 
 			// Set spinner selector from "Main" layout resource
 			Spinner dsstSpinner = FindViewById<Spinner>(Resource.Id.action_bar_spinner);
