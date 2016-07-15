@@ -1,6 +1,7 @@
 ﻿using Android.App;
 using Android.Widget;
 using Android.OS;
+using Android.Content;
 
 namespace Trax
 {
@@ -14,11 +15,20 @@ namespace Trax
 			SetContentView(Resource.Layout.Main);
 
 			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
-			settings.Click += delegate {
+			settings.Click += delegate{
 				StartActivity(typeof(whoAreYourPrompt));
 			};
-		}
 
+			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
+			settings.Click += delegate{
+				//var newInputIntent = new Intent(this, typeof(NewInputActivity));
+				//StartActivity(newInputIntent);
+				StartActivity(typeof(NewInputActivity));
+			};
+	}
+
+		// For newInput 
+		//newInputButton.Click += (sender, e) =>
 
 
 	}

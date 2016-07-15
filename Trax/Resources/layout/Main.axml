@@ -12,14 +12,14 @@
             android:text="New"
             android:layout_width="match_parent"
             android:layout_height="265.5dp"
-            android:id="@+id/newButton"
+            android:id="@+id/NewInputButton"
             android:textSize="50dp"
             android:background="#ff2e7d32" />
         <Button
             android:text="View"
             android:layout_width="match_parent"
             android:layout_height="237.0dp"
-            android:id="@+id/viewButton"
+            android:id="@+id/ViewButton"
             android:textSize="50dp"
             android:background="#ff455a64" />
         <Button
