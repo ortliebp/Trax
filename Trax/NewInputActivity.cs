@@ -34,7 +34,7 @@ namespace Trax
 		{
 			Spinner spinner = (Spinner)sender;
 
-			string toast = string.Format("The planet is {0}", spinner.GetItemAtPosition(e.Position));
+			string toast = string.Format("Yes!", spinner.GetItemAtPosition(e.Position));
 			Toast.MakeText(this, toast, ToastLength.Long).Show();
 		}
 	}

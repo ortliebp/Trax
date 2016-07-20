@@ -20,10 +20,10 @@ namespace Trax
 			};
 
 			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
-			settings.Click += delegate{
-				//var newInputIntent = new Intent(this, typeof(NewInputActivity));
-				//StartActivity(newInputIntent);
-				StartActivity(typeof(NewInputActivity));
+			newInputButton.Click += delegate{
+				var newInputIntent = new Intent(this, typeof(NewInputActivity));
+				StartActivity(newInputIntent);
+				//StartActivity(typeof(NewInputActivity));
 			};
 	}
 
