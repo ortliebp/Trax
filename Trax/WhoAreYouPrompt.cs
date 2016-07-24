@@ -12,15 +12,17 @@ using Android.Widget;
 
 namespace Trax
 {
-	[Activity(Label = "whoAreYourPrompt")]
-	public class whoAreYourPrompt : Activity
+	[Activity(Label = "whoAreYouPrompt")]
+	public class whoAreYouPrompt : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
+			string text = Intent.GetStringExtra("MyData") ?? "Data not available";
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.whoAreYouLayout);
 
 			Button confirm = FindViewById<Button>(Resource.Id.confirmButton);
+			confirm.Text = text;
 			confirm.Click += delegate
 			{
 				StartActivity(typeof(MainActivity));
@@ -28,4 +30,3 @@ namespace Trax
 		}
 	}
 }
-
