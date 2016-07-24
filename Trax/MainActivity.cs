@@ -13,7 +13,7 @@ namespace Trax {
 
 			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
 			settings.Click += delegate {
-				Intent whoAreYou = new Intent(this, typeof(Trax.whoAreYouPrompt));
+				var whoAreYou = new Intent(this, typeof(Trax.whoAreYouPrompt));
 				whoAreYou.PutExtra("MyData", "Data from Activity1");
 				StartActivity(whoAreYou);
 			};
