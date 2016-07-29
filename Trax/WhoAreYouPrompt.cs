@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Parse;
 
 namespace Trax
 {
@@ -28,6 +29,15 @@ namespace Trax
 			confirm.Click += delegate {
 				mainInstance.setName(namePromptTextBox.Text);
 				StartActivity(typeof(MainActivity));
+			};
+
+			var btn = this.FindViewById<Button>(Resource.Id.parseButton);
+			btn.Click += async (sender, e) =>
+			{
+				var obj = new ParseObject("Note");
+				obj["text"] = "It's working!";
+				obj["tags"] = new List<string> { "welcome", "xamarin", "parse" };
+				await obj.SaveAsync();
 			};
 		}
 	}
