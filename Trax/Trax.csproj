@@ -52,12 +52,8 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <Compile Include="whoAreYourPrompt.cs" />
+    <Compile Include="whoAreYouPrompt.cs" />
     <Compile Include="NewInputActivity.cs" />
-=======
-    <Compile Include="WhoAreYouPrompt.cs" />
->>>>>>> david
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
