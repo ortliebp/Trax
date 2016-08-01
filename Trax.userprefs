@@ -1,9 +1,8 @@
 ﻿<Properties StartupItem="Trax/Trax.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Trax/MainActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trax/WhoAreYouPrompt.cs">
     <Files>
-      <File FileName="Trax/MainActivity.cs" Line="3" Column="18" />
-      <File FileName="Trax/whoAreYourPrompt.cs" Line="12" Column="1" />
-      <File FileName="Trax/NewInputActivity.cs" Line="36" Column="4" />
+      <File FileName="Trax/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Trax/WhoAreYouPrompt.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -11,5 +10,4 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Trax AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
 </Properties>
