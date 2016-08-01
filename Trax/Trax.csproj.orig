@@ -57,7 +57,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="whoAreYouPrompt.cs" />
     <Compile Include="NewInputActivity.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="App.cs" />
+>>>>>>> david
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
