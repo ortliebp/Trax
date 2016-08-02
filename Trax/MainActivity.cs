@@ -17,6 +17,7 @@ namespace Trax
 			SetContentView(Resource.Layout.Main);
 			TextView greeting = FindViewById<TextView>(Resource.Id.greetingTextBox);
 			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
+			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
 
 			var documents = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
 			if (System.IO.File.Exists(documents + "/localName.txt"))
@@ -37,6 +38,12 @@ namespace Trax
 				whoAreYou.PutExtra("MyData", "Confirm"); //"Confirm" string is sent to whoAreYou activity
 				StartActivity(whoAreYou);
 			};
+
+			newInputButton.Click += delegate {
+				var newInputIntent = new Intent(this, typeof(Trax.NewInputActivity));
+				StartActivity(newInputIntent);
+			};
+
 		}
 		public void setName(string confirmedName)
 		{
