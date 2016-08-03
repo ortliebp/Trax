@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace Trax
 {
-	[Activity(Label = "New")]
+	[Activity(Label = "NewInputActivity")]
 	public class NewInputActivity : Activity
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
@@ -22,13 +22,13 @@ namespace Trax
 			SetContentView(Resource.Layout.NewInputLayout);
 
 			// Set spinner selector from "Main" layout resource
-			Spinner dsstSpinner = FindViewById<Spinner>(Resource.Id.action_bar_spinner);
-			dsstSpinner.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
-			var adapter = ArrayAdapter.CreateFromResource(
-				this, Resource.Array.DSST_list, Android.Resource.Layout.SimpleSpinnerItem);
+			//Spinner dsstSpinner = FindViewById<Spinner>(Resource.Id.action_bar_spinner);
+			//	dsstSpinner.ItemSelected += spinner_ItemSelected;
+			//var adapter = ArrayAdapter.CreateFromResource(
+			//	this, Resource.Array.DSST_list, Android.Resource.Layout.SimpleSpinnerItem);
 
-			adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-			dsstSpinner.Adapter = adapter;
+			//adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+			//dsstSpinner.Adapter = adapter;
 		}
 		private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
 		{
