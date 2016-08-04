@@ -42,18 +42,9 @@ namespace Trax
 			newInputButton.Click += (sender, e) =>
 			{
 				var newInputIntent = new Intent(this, typeof(Trax.NewInputActivity));
-				//newInputIntent.PutExtra("NewInputData", );
+				newInputIntent.PutExtra("NewInputData", Name);
 				StartActivity(newInputIntent);
 			};
-
-//			callHistoryButton.Click += (sender, e) =>
-//{
-//	var intent = new Intent(this, typeof(CallHistoryActivity));
-//	intent.PutStringArrayListExtra("phone_numbers", phoneNumbers);
-//	StartActivity(intent);
-//};
-
-//			secondActivity.PutExtra("FirstActivity", mainTextView.Text);
 		}
 
 		public void setName(string confirmedName)

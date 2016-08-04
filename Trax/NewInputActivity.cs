@@ -17,8 +17,11 @@ namespace Trax
 	{
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
-			base.OnCreate(savedInstanceState);
+            //var documents = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
+            //var filename = Path.Combine(documents, "localName.txt");
 
+            string text = Intent.GetStringExtra("NewInputData") ?? "Error";
+            base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.NewInputLayout);
 
 			// Set spinner selector from "Main" layout resource
