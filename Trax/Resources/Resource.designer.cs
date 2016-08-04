@@ -1442,6 +1442,9 @@ namespace Trax
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f0c0065
+			public const int GoBackButton = 2131492965;
+			
 			// aapt resource value: 0x7f0c0052
 			public const int NewInputButton = 2131492946;
 			
@@ -1520,8 +1523,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c001c
 			public const int collapseActionView = 2131492892;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int confirmButton = 2131492966;
+			// aapt resource value: 0x7f0c0067
+			public const int confirmButton = 2131492967;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int contentPanel = 2131492913;
@@ -1604,8 +1607,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c0013
 			public const int multiply = 2131492883;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int namePrompt = 2131492965;
+			// aapt resource value: 0x7f0c0066
+			public const int namePrompt = 2131492966;
 			
 			// aapt resource value: 0x7f0c001e
 			public const int never = 2131492894;
@@ -1619,8 +1622,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c002d
 			public const int parentPanel = 2131492909;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int parseButton = 2131492967;
+			// aapt resource value: 0x7f0c0068
+			public const int parseButton = 2131492968;
 			
 			// aapt resource value: 0x7f0c0005
 			public const int progress_circular = 2131492869;
@@ -1913,7 +1916,10 @@ namespace Trax
 			public const int support_simple_spinner_dropdown_item = 2130968614;
 			
 			// aapt resource value: 0x7f040027
-			public const int whoAreYouLayout = 2130968615;
+			public const int ViewInputLayout = 2130968615;
+			
+			// aapt resource value: 0x7f040028
+			public const int whoAreYouLayout = 2130968616;
 			
 			static Layout()
 			{

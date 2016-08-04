@@ -38,10 +38,10 @@ namespace Trax
 			var btn = this.FindViewById<Button>(Resource.Id.parseButton);
 			btn.Click += async (sender, e) =>
 			{
-				var obj = new ParseObject("Note");
-				obj["text"] = "It's working!";
-				obj["tags"] = new List<string> { "welcome", "xamarin", "parse" };
-				await obj.SaveAsync();
+				ParseObject delivery = new ParseObject("DeliveryList");
+				delivery.Add("Name", "David");
+				delivery.Add("PO", "P0345345");
+				await delivery.SaveAsync();
 			};
 		}
 	}

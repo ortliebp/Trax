@@ -18,6 +18,7 @@ namespace Trax
 			TextView greeting = FindViewById<TextView>(Resource.Id.greetingTextBox);
 			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
 			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
+			Button viewDataButton = FindViewById<Button>(Resource.Id.ViewButton);
 
 			var documents = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
 			if (System.IO.File.Exists(documents + "/localName.txt"))
@@ -25,6 +26,7 @@ namespace Trax
 				var filename = Path.Combine(documents, "localName.txt");
 				var text = File.ReadAllText(filename);
 				greeting.Text = text;
+				Name = text;
 			}
 			else {
 				var whoAreYou = new Intent(this, typeof(Trax.whoAreYouPrompt));
@@ -40,6 +42,13 @@ namespace Trax
 			};
 
 			newInputButton.Click += (sender, e) =>
+			{
+				var newInputIntent = new Intent(this, typeof(Trax.NewInputActivity));
+				//newInputIntent.PutExtra("NewInputData", Name);
+				StartActivity(newInputIntent);
+			};
+
+			viewDataButton.Click += (sender, e) =>
 			{
 				var newInputIntent = new Intent(this, typeof(Trax.NewInputActivity));
 				//newInputIntent.PutExtra("NewInputData", );

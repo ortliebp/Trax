@@ -1594,6 +1594,7 @@ containing a value of this type.
         public static final int notification_template_icon_bg=0x7f020045;
     }
     public static final class id {
+        public static final int GoBackButton=0x7f0c0065;
         public static final int NewInputButton=0x7f0c0052;
         public static final int ViewButton=0x7f0c0053;
         public static final int action0=0x7f0c0058;
@@ -1620,7 +1621,7 @@ containing a value of this type.
         public static final int checkbox=0x7f0c0039;
         public static final int chronometer=0x7f0c005f;
         public static final int collapseActionView=0x7f0c001c;
-        public static final int confirmButton=0x7f0c0066;
+        public static final int confirmButton=0x7f0c0067;
         public static final int contentPanel=0x7f0c0031;
         public static final int custom=0x7f0c0037;
         public static final int customPanel=0x7f0c0036;
@@ -1648,12 +1649,12 @@ containing a value of this type.
         public static final int media_actions=0x7f0c005b;
         public static final int middle=0x7f0c001a;
         public static final int multiply=0x7f0c0013;
-        public static final int namePrompt=0x7f0c0065;
+        public static final int namePrompt=0x7f0c0066;
         public static final int never=0x7f0c001e;
         public static final int none=0x7f0c000e;
         public static final int normal=0x7f0c000a;
         public static final int parentPanel=0x7f0c002d;
-        public static final int parseButton=0x7f0c0067;
+        public static final int parseButton=0x7f0c0068;
         public static final int progress_circular=0x7f0c0005;
         public static final int progress_horizontal=0x7f0c0006;
         public static final int radio=0x7f0c003b;
@@ -1746,7 +1747,8 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f040024;
         public static final int select_dialog_singlechoice_material=0x7f040025;
         public static final int support_simple_spinner_dropdown_item=0x7f040026;
-        public static final int whoareyoulayout=0x7f040027;
+        public static final int viewinputlayout=0x7f040027;
+        public static final int whoareyoulayout=0x7f040028;
     }
     public static final class mipmap {
         public static final int icon=0x7f030000;
