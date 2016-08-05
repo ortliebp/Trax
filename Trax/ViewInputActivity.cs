@@ -25,7 +25,6 @@ namespace Trax
 			//string text = Intent.GetStringExtra("MyData") ?? "Data not available"; //The contents of the "MyData" string is retrieved from the main activity
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.ViewInputLayout);
-
 			Button goBack = FindViewById<Button>(Resource.Id.GoBackButton);
 
 			for (int i = 0; i < 5; i++)
