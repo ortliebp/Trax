@@ -8,7 +8,6 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Parse;
 using System.IO;
 
 namespace Trax
@@ -36,13 +35,6 @@ namespace Trax
 			};
 
 			var btn = this.FindViewById<Button>(Resource.Id.parseButton);
-			btn.Click += async (sender, e) =>
-			{
-				ParseObject delivery = new ParseObject("DeliveryList");
-				delivery.Add("Name", "David");
-				delivery.Add("PO", "P0345345");
-				await delivery.SaveAsync();
-			};
 		}
 	}
 }

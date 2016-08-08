@@ -1,16 +1,27 @@
 ﻿<Properties StartupItem="Trax/Trax.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Trax/App.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trax/ViewInputActivity.cs">
     <Files>
-      <File FileName="Trax/MainActivity.cs" Line="1" Column="1" />
-      <File FileName="Trax/WhoAreYouPrompt.cs" Line="40" Column="5" />
-      <File FileName="Trax/ViewInputActivity.cs" Line="21" Column="14" />
-      <File FileName="Trax/App.cs" Line="26" Column="7" />
+      <File FileName="Trax/MainActivity.cs" Line="5" Column="17" />
+      <File FileName="Trax/WhoAreYouPrompt.cs" Line="37" Column="65" />
+      <File FileName="Trax/ViewInputActivity.cs" Line="12" Column="54" />
+      <File FileName="Trax/Properties/AndroidManifest.xml" Line="1" Column="1" />
     </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Trax" expanded="True">
+            <Node name="Trax" expanded="True">
+              <Node name="ViewInputActivity.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Trax AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.Android_Accelerated_x86" />
+  <MonoDevelop.Ide.ItemProperties.Trax AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.tester" />
 </Properties>
