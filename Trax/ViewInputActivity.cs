@@ -9,21 +9,20 @@ namespace Trax
 	[Activity(Label = "ViewInputActivity")]
 	public class ViewInputActivity : Activity
 	{
+		//We will use the list below soon
 		//List<Button> ButtonViewList = new List<Button>();
-		string time = "";
+		string testText = "";
+		//Eventually we will want what is below to be more secure, but first we need a brute-force method
+		string connectionParam = "server=148.61.131.80;uid=username;port=8889;pwd=password;database=test;";
+		MySqlConnection connection = null;
+		MySqlDataReader dataReader = null;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
-			//MySqlConnection mysqlConn = new MySqlConnection(
-
-				string cs = "server=148.61.131.80;uid=username;port=8889;pwd=password;database=test;";
-			//mysqlConn.Open();
-
-			//string text = Intent.GetStringExtra("MyData") ?? "Data not available"; //The contents of the "MyData" string is retrieved from the main activity
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.ViewInputLayout);
 			Button goBack = FindViewById<Button>(Resource.Id.GoBackButton);
-			goBack.Text = time;
+			goBack.Text = testText;
 
 			goBack.Click += (sender, e) =>
 			{
@@ -31,42 +30,38 @@ namespace Trax
 				StartActivity(MainActivityIntent);
 			};
 
-			MySqlConnection conn = null;
-			MySqlDataReader rdr = null;
-
+			//When the activity loads and the appropriate resources are initialized, we want to immediately connect to the remote database
 			try
 			{
-				conn = new MySqlConnection(cs);
-				conn.Open();
+				connection = new MySqlConnection(connectionParam);
+				connection.Open();
 
-				string stm = "SELECT * FROM trax";
-				MySqlCommand cmd = new MySqlCommand(stm, conn);
-				rdr = cmd.ExecuteReader();
+				string stm = "SELECT * FROM trax"; //String using query syntax
+				MySqlCommand cmd = new MySqlCommand(stm, connection); //Query is placed alongside our MySQLConnection object to create a command object
+				dataReader = cmd.ExecuteReader(); //Our data reader which was null is given our new command
 
-				while (rdr.Read())
+				while (dataReader.Read())
 				{
-					goBack.Text = (rdr.GetInt32(0) + ": "
-						+ rdr.GetString(1));
+					goBack.Text = (dataReader.GetInt32(0) + " : " + dataReader.GetString(1));
 				}
-
 			}
-			catch (MySqlException ex)
-			{
-				goBack.Text = "Error: {0}" + ex;
 
+			catch (MySqlException error) //If at any point there's a connection or query error, we want to know what exactly is going on
+			{
+				goBack.Text = "Error: {0}" + error;
 			}
-			finally
+
+			finally //We need to close all of our connections once everything is retrieved
 			{
-				if (rdr != null)
+				if (dataReader != null)
 				{
-					rdr.Close();
+					dataReader.Close();
 				}
 
-				if (conn != null)
+				if (connection != null)
 				{
-					conn.Close();
+					connection.Close();
 				}
-
 			}
 		}
 	}

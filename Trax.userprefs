@@ -1,9 +1,9 @@
 ﻿<Properties StartupItem="Trax/Trax.csproj">
   <MonoDevelop.Ide.Workbench ActiveDocument="Trax/ViewInputActivity.cs">
     <Files>
-      <File FileName="Trax/MainActivity.cs" Line="5" Column="17" />
-      <File FileName="Trax/WhoAreYouPrompt.cs" Line="37" Column="65" />
-      <File FileName="Trax/ViewInputActivity.cs" Line="12" Column="54" />
+      <File FileName="Trax/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Trax/WhoAreYouPrompt.cs" Line="1" Column="1" />
+      <File FileName="Trax/ViewInputActivity.cs" Line="1" Column="1" />
       <File FileName="Trax/Properties/AndroidManifest.xml" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -11,7 +11,7 @@
         <State name="__root__">
           <Node name="Trax" expanded="True">
             <Node name="Trax" expanded="True">
-              <Node name="ViewInputActivity.cs" selected="True" />
+              <Node name="References" selected="True" />
             </Node>
           </Node>
         </State>
@@ -23,5 +23,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Trax AndroidDesignerPreferredDevice="Nexus 4" PreferredExecutionTarget="Android.tester" />
+  <MonoDevelop.Ide.ItemProperties.Trax PreferredExecutionTarget="Android.ugh" />
 </Properties>

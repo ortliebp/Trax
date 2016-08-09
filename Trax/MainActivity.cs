@@ -13,30 +13,37 @@ namespace Trax
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
-			base.OnCreate(savedInstanceState);
-			SetContentView(Resource.Layout.Main);
+			//The bare minimum resources are initialized before anything else in order to check if the user has given themself a name
+			//As efficiently as possble
 			TextView greeting = FindViewById<TextView>(Resource.Id.greetingTextBox);
-			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
-			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
-			Button viewInputButton = FindViewById<Button>(Resource.Id.ViewButton);
-
 			var documents = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
-			if (System.IO.File.Exists(documents + "/localName.txt"))
+
+			//The actual username check. We'll check if the file is there first, because this case will happen the least amount of times
+			if (File.Exists(documents + "/localName.txt")) 
 			{
 				var filename = Path.Combine(documents, "localName.txt");
 				var text = File.ReadAllText(filename);
 				greeting.Text = text;
 			}
-			else {
+
+			else
+			{
 				var whoAreYou = new Intent(this, typeof(Trax.whoAreYouPrompt));
 				whoAreYou.PutExtra("MyData", "Confirm"); //"Confirm" string is sent to whoAreYou activity
 				StartActivity(whoAreYou);
 			}
 
+			//The rest of the resources and code can run after it's confirmed that the user has set a name
+			base.OnCreate(savedInstanceState);
+			SetContentView(Resource.Layout.Main);
+
+			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
+			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
+			Button viewInputButton = FindViewById<Button>(Resource.Id.ViewButton);
+
 			settings.Click += delegate
 			{
 				var whoAreYou = new Intent(this, typeof(Trax.whoAreYouPrompt));
-				whoAreYou.PutExtra("MyData", "Confirm"); //"Confirm" string is sent to whoAreYou activity
 				StartActivity(whoAreYou);
 			};
 
