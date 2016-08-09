@@ -24,15 +24,25 @@ namespace Trax
             base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.NewInputLayout);
 
-			// Set spinner selector from "Main" layout resource
-			//Spinner dsstSpinner = FindViewById<Spinner>(Resource.Id.action_bar_spinner);
-			//	dsstSpinner.ItemSelected += spinner_ItemSelected;
-			//var adapter = ArrayAdapter.CreateFromResource(
-			//	this, Resource.Array.DSST_list, Android.Resource.Layout.SimpleSpinnerItem);
+            TextView POnumberTextBox = FindViewByID<EditText>(Resource.Id.POtextInput);
+            TextView IDCnumberTextBox = findViewByID<EditText>(Resource.Id.IDCtextInput);
+            Button confirmButton = FindViewById<Button>(Resource.Id.inputConfirmButton);
 
-			//adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
-			//dsstSpinner.Adapter = adapter;
-		}
+            confirmButton.Click += (sender, e) =>
+            {
+                var returnToMain = new Intent(this, typeof(Trax.MainActivity));
+                StartActivity(returnToMain);
+            };
+
+            // Set spinner selector from "Main" layout resource
+            //Spinner dsstSpinner = FindViewById<Spinner>(Resource.Id.action_bar_spinner);
+            //	dsstSpinner.ItemSelected += spinner_ItemSelected;
+            //var adapter = ArrayAdapter.CreateFromResource(
+            //	this, Resource.Array.DSST_list, Android.Resource.Layout.SimpleSpinnerItem);
+
+            //adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            //dsstSpinner.Adapter = adapter;
+        }
 		private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
 		{
 			Spinner spinner = (Spinner)sender;
