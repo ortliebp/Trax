@@ -1639,7 +1639,7 @@ containing a value of this type.
         public static final int checkbox=0x7f0c0039;
         public static final int chronometer=0x7f0c005e;
         public static final int collapseActionView=0x7f0c001d;
-        public static final int confirmButton=0x7f0c0066;
+        public static final int confirmButton=0x7f0c0067;
         public static final int contentPanel=0x7f0c0031;
         public static final int custom=0x7f0c0037;
         public static final int customPanel=0x7f0c0036;
@@ -1662,12 +1662,13 @@ containing a value of this type.
         public static final int line1=0x7f0c005c;
         public static final int line3=0x7f0c0060;
         public static final int linearLayout=0x7f0c0050;
+        public static final int linearLayoutView=0x7f0c0065;
         public static final int listMode=0x7f0c0009;
         public static final int list_item=0x7f0c0028;
         public static final int media_actions=0x7f0c005a;
         public static final int middle=0x7f0c001b;
         public static final int multiply=0x7f0c0014;
-        public static final int namePrompt=0x7f0c0065;
+        public static final int namePrompt=0x7f0c0066;
         public static final int never=0x7f0c001f;
         public static final int none=0x7f0c000e;
         public static final int normal=0x7f0c000a;

@@ -1550,8 +1550,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c001d
 			public const int collapseActionView = 2131492893;
 			
-			// aapt resource value: 0x7f0c0066
-			public const int confirmButton = 2131492966;
+			// aapt resource value: 0x7f0c0067
+			public const int confirmButton = 2131492967;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int contentPanel = 2131492913;
@@ -1619,6 +1619,9 @@ namespace Trax
 			// aapt resource value: 0x7f0c0050
 			public const int linearLayout = 2131492944;
 			
+			// aapt resource value: 0x7f0c0065
+			public const int linearLayoutView = 2131492965;
+			
 			// aapt resource value: 0x7f0c0009
 			public const int listMode = 2131492873;
 			
@@ -1634,8 +1637,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c0014
 			public const int multiply = 2131492884;
 			
-			// aapt resource value: 0x7f0c0065
-			public const int namePrompt = 2131492965;
+			// aapt resource value: 0x7f0c0066
+			public const int namePrompt = 2131492966;
 			
 			// aapt resource value: 0x7f0c001f
 			public const int never = 2131492895;
