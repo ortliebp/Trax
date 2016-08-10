@@ -3,15 +3,18 @@ using Android.Content;
 using Android.OS;
 using Android.Widget;
 using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace Trax
 {
 	[Activity(Label = "ViewInputActivity")]
 	public class ViewInputActivity : Activity
 	{
-		//We will use the list below soon
-		//List<Button> ButtonViewList = new List<Button>();
+		List<Button> ButtonViewList = new List<Button>();
+		List<string> retrievedData = new List<string>();
 		string testText = "";
+		int pubCount = 0;
+
 		//Eventually we will want what is below to be more secure, but first we need a brute-force method
 		string connectionParam = "server=148.61.131.80;uid=username;port=8889;pwd=password;database=test;";
 		MySqlConnection connection = null;
@@ -40,10 +43,24 @@ namespace Trax
 				MySqlCommand cmd = new MySqlCommand(stm, connection); //Query is placed alongside our MySQLConnection object to create a command object
 				dataReader = cmd.ExecuteReader(); //Our data reader which was null is given our new command
 
+				int count = dataReader.FieldCount;
+				pubCount = count;
 				while (dataReader.Read())
 				{
-					goBack.Text = (dataReader.GetInt32(0) + " : " + dataReader.GetString(1));
+					for (int i = 0; i < count; i++)
+					{
+						retrievedData.Add(dataReader.GetString(i));
+						Button b = new Button(this);
+						b.Text = retrievedData[i];
+						b.Click += delegate
+						{
+						};
+						//testText = dataReader.GetValue(i).ToString();
+
+						//testText = (dataReader.GetInt32(i) + " : " + dataReader.GetString(1)).ToString();
+					}
 				}
+				goBack.Text = testText;
 			}
 
 			catch (MySqlException error) //If at any point there's a connection or query error, we want to know what exactly is going on
@@ -66,4 +83,3 @@ namespace Trax
 		}
 	}
 }
-

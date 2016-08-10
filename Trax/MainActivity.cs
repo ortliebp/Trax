@@ -15,6 +15,8 @@ namespace Trax
 		{
 			//The bare minimum resources are initialized before anything else in order to check if the user has given themself a name
 			//As efficiently as possble
+			base.OnCreate(savedInstanceState);
+			SetContentView(Resource.Layout.Main);
 			TextView greeting = FindViewById<TextView>(Resource.Id.greetingTextBox);
 			var documents = System.Environment.GetFolderPath(System.Environment.SpecialFolder.MyDocuments);
 
@@ -34,9 +36,6 @@ namespace Trax
 			}
 
 			//The rest of the resources and code can run after it's confirmed that the user has set a name
-			base.OnCreate(savedInstanceState);
-			SetContentView(Resource.Layout.Main);
-
 			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
 			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
 			Button viewInputButton = FindViewById<Button>(Resource.Id.ViewButton);
