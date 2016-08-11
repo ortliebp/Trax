@@ -82,6 +82,7 @@
     <Compile Include="whoAreYouPrompt.cs" />
     <Compile Include="NewInputActivity.cs" />
     <Compile Include="ViewInputActivity.cs" />
+    <Compile Include="ViewDetails.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -100,6 +101,7 @@
     <AndroidResource Include="Resources\layout\whoAreYouLayout.axml" />
     <AndroidResource Include="Resources\layout\NewInputLayout.axml" />
     <AndroidResource Include="Resources\layout\ViewInputLayout.axml" />
+    <AndroidResource Include="Resources\layout\ViewDetailsLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

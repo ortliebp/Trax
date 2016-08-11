@@ -3,7 +3,6 @@ using Android.Content;
 using Android.OS;
 using Android.Widget;
 using MySql.Data.MySqlClient;
-using System.Collections.Generic;
 
 namespace Trax
 {
@@ -42,21 +41,24 @@ namespace Trax
 				Button[] ButtonArray = new Button[count];
 				string[] retrievedData = new string[count];
 				string[] retrievedDataPO = new string[count];
-
 				while (dataReader.Read())
 				{
 					for (int i = 0; i < count; i += 2) //Increment by two in order to seperate Names and POs
 					{
+						string name; //We need this declared in the loop for the Intent to receive the correct string
 						retrievedData[i] = dataReader.GetString(i); //Names show up in every other index
+						name = retrievedData[i];
 						retrievedData[i + 1] = dataReader.GetString(i + 1); //POs show up in between
 						retrievedDataPO[i + 1] = retrievedData[i + 1]; //Dumps the odd indexes into the PO array
-
 						ButtonArray[i] = new Button(this); //Initializes our buttons. One button every two indexes 
-						ButtonArray[i].Text = retrievedData[i] + " PO: " + retrievedDataPO[i + 1]; //Combine the even and odd indexes
+
+						ButtonArray[i].Text = name + " PO: " + retrievedDataPO[i + 1]; //Combine the even and odd indexes
 						linLayView.AddView(ButtonArray[i]); //Adds the buttons to our view
 						ButtonArray[i].Click += delegate
 						{
-							//Code will be added to view individual rows with a seperate query and activity
+							var viewDetails = new Intent(this, typeof(Trax.ViewDetails));
+							viewDetails.PutExtra("MyData", "SELECT Name, PO, IDC FROM trax WHERE Name = '" + name + "'"); //"Confirm" string is sent to whoAreYou activity
+							StartActivity(viewDetails);
 						};
 					}
 				}
