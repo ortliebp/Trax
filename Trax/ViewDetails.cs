@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using Android.Widget;
 using MySql.Data.MySqlClient;
+using Android.Graphics;
 
 namespace Trax
 {
@@ -12,6 +13,8 @@ namespace Trax
 		string connectionParam = "server=148.61.131.80;uid=username;port=8889;pwd=password;database=test;";
 		MySqlConnection connection = null;
 		MySqlDataReader dataReader = null;
+		int notDelButtonCount = 0;
+		int DelButtonCount = 0;
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
@@ -19,12 +22,48 @@ namespace Trax
 			SetContentView(Resource.Layout.ViewDetailsLayout);
 			Button goBack = FindViewById<Button>(Resource.Id.goBack);
 			LinearLayout linLayView = FindViewById<LinearLayout>(Resource.Id.linearLayoutView);
+			Button notDeliveredButton = FindViewById<Button>(Resource.Id.NotDeliveredButton);
+			Button deliveredButton = FindViewById<Button>(Resource.Id.DeliveredButton);
+			deliveredButton.SetBackgroundColor(Color.LightGray);
+			notDeliveredButton.SetBackgroundColor(Color.LightGray);
 
 			string customQuery = Intent.GetStringExtra("MyData") ?? "Data not available";
 			goBack.Text = customQuery;
 			goBack.Click += delegate
 			{
 				StartActivity(typeof(ViewInputActivity));
+			};
+
+			notDeliveredButton.Click += delegate
+			{
+				notDeliveredButton.Text = "Not Delivered";
+				deliveredButton.Text = "Delivered";
+				DelButtonCount = 0;
+				deliveredButton.SetBackgroundColor(Color.LightGray);
+				notDelButtonCount++;
+				notDeliveredButton.Text = "Not Delivered \r\n Tap again to confirm";
+				notDeliveredButton.SetBackgroundColor(Color.LimeGreen);
+				if (notDelButtonCount >= 2)
+				{
+					notDelButtonCount = 0;
+					StartActivity(typeof(MainActivity));
+				}
+			};
+
+			deliveredButton.Click += delegate
+			{
+				notDeliveredButton.Text = "Not Delivered";
+				deliveredButton.Text = "Delivered";
+				notDelButtonCount = 0;
+				notDeliveredButton.SetBackgroundColor(Color.LightGray);
+				DelButtonCount++;
+				deliveredButton.Text = "Delivered \r\n Tap again to confirm";
+				deliveredButton.SetBackgroundColor(Color.LimeGreen);
+				if (DelButtonCount >= 2)
+				{
+					DelButtonCount = 0;
+					StartActivity(typeof(MainActivity));
+				}
 			};
 
 			try

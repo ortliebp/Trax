@@ -1469,11 +1469,17 @@ namespace Trax
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f0c0066
-			public const int GoBackButton = 2131492966;
+			// aapt resource value: 0x7f0c0069
+			public const int DeliveredButton = 2131492969;
+			
+			// aapt resource value: 0x7f0c006a
+			public const int GoBackButton = 2131492970;
 			
 			// aapt resource value: 0x7f0c0052
 			public const int NewInputButton = 2131492946;
+			
+			// aapt resource value: 0x7f0c0067
+			public const int NotDeliveredButton = 2131492967;
 			
 			// aapt resource value: 0x7f0c0053
 			public const int ViewButton = 2131492947;
@@ -1550,8 +1556,11 @@ namespace Trax
 			// aapt resource value: 0x7f0c001d
 			public const int collapseActionView = 2131492893;
 			
-			// aapt resource value: 0x7f0c0068
-			public const int confirmButton = 2131492968;
+			// aapt resource value: 0x7f0c006c
+			public const int confirmButton = 2131492972;
+			
+			// aapt resource value: 0x7f0c0066
+			public const int confirmLayout = 2131492966;
 			
 			// aapt resource value: 0x7f0c0031
 			public const int contentPanel = 2131492913;
@@ -1640,8 +1649,8 @@ namespace Trax
 			// aapt resource value: 0x7f0c0014
 			public const int multiply = 2131492884;
 			
-			// aapt resource value: 0x7f0c0067
-			public const int namePrompt = 2131492967;
+			// aapt resource value: 0x7f0c006b
+			public const int namePrompt = 2131492971;
 			
 			// aapt resource value: 0x7f0c001f
 			public const int never = 2131492895;
@@ -1726,6 +1735,9 @@ namespace Trax
 			
 			// aapt resource value: 0x7f0c0011
 			public const int showTitle = 2131492881;
+			
+			// aapt resource value: 0x7f0c0068
+			public const int space1 = 2131492968;
 			
 			// aapt resource value: 0x7f0c002c
 			public const int spacer = 2131492908;
