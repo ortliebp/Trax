@@ -1,22 +1,11 @@
 ﻿<Properties StartupItem="Trax/Trax.csproj">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Trax/ViewInputActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trax/ViewDetails.cs">
     <Files>
-      <File FileName="Trax/MainActivity.cs" Line="1" Column="1" />
+      <File FileName="Trax/MainActivity.cs" Line="35" Column="30" />
       <File FileName="Trax/WhoAreYouPrompt.cs" Line="1" Column="1" />
       <File FileName="Trax/ViewInputActivity.cs" Line="1" Column="1" />
-      <File FileName="Trax/Properties/AndroidManifest.xml" Line="1" Column="1" />
+      <File FileName="Trax/ViewDetails.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="Trax" expanded="True">
-            <Node name="Trax" expanded="True">
-              <Node name="References" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -1612,8 +1612,10 @@ containing a value of this type.
         public static final int notification_template_icon_bg=0x7f02004b;
     }
     public static final class id {
-        public static final int GoBackButton=0x7f0c0066;
+        public static final int DeliveredButton=0x7f0c0069;
+        public static final int GoBackButton=0x7f0c006a;
         public static final int NewInputButton=0x7f0c0052;
+        public static final int NotDeliveredButton=0x7f0c0067;
         public static final int ViewButton=0x7f0c0053;
         public static final int action0=0x7f0c0057;
         public static final int action_bar=0x7f0c0041;
@@ -1639,7 +1641,8 @@ containing a value of this type.
         public static final int checkbox=0x7f0c0039;
         public static final int chronometer=0x7f0c005e;
         public static final int collapseActionView=0x7f0c001d;
-        public static final int confirmButton=0x7f0c0068;
+        public static final int confirmButton=0x7f0c006c;
+        public static final int confirmLayout=0x7f0c0066;
         public static final int contentPanel=0x7f0c0031;
         public static final int custom=0x7f0c0037;
         public static final int customPanel=0x7f0c0036;
@@ -1669,7 +1672,7 @@ containing a value of this type.
         public static final int media_actions=0x7f0c005a;
         public static final int middle=0x7f0c001b;
         public static final int multiply=0x7f0c0014;
-        public static final int namePrompt=0x7f0c0067;
+        public static final int namePrompt=0x7f0c006b;
         public static final int never=0x7f0c001f;
         public static final int none=0x7f0c000e;
         public static final int normal=0x7f0c000a;
@@ -1698,6 +1701,7 @@ containing a value of this type.
         public static final int showCustom=0x7f0c000f;
         public static final int showHome=0x7f0c0010;
         public static final int showTitle=0x7f0c0011;
+        public static final int space1=0x7f0c0068;
         public static final int spacer=0x7f0c002c;
         public static final int split_action_bar=0x7f0c0007;
         public static final int src_atop=0x7f0c0016;
