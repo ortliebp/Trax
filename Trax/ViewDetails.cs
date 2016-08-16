@@ -10,7 +10,7 @@ namespace Trax
 	[Activity(Label = "ViewDetails")]
 	public class ViewDetails : Activity
 	{
-		string connectionParam = "server=148.61.131.80;uid=username;port=8889;pwd=password;database=test;";
+		string connectionParam = "server=35.39.32.163;uid=username;port=8889;pwd=password;database=test;";
 		MySqlConnection connection = null;
 		MySqlDataReader dataReader = null;
 		int notDelButtonCount = 0;
