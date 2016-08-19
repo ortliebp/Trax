@@ -5,27 +5,43 @@
     p1:layout_height="match_parent"
     p1:id="@+id/linearLayout1">
     <TextView
+        p1:text="DSST Name"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView1" />
+    <TextView
+        p1:text="Text"
+        p1:layout_width="match_parent"
+        p1:layout_height="28.0dp"
+        p1:id="@+id/DSSTname"
+        p1:gravity="center" />
+    <TextView
         p1:text="PO Number"
         p1:textAppearance="?android:attr/textAppearanceLarge"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:id="@+id/POtext" />
-    <TextView
+    <EditText
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:id="@+id/POtextInput"
-        p1:text="#" />
+        p1:hint="# "
+        p1:gravity="center_vertical"
+        p1:layout_marginBottom="0.0dp" />
     <TextView
         p1:text="IDC"
         p1:textAppearance="?android:attr/textAppearanceLarge"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
         p1:id="@+id/IDCtext" />
-    <TextView
-        p1:text="#"
+    <EditText
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/IDCtextInput" />
+        p1:id="@+id/IDCtextInput"
+        p1:hint="# "
+        p1:gravity="center_vertical"
+        p1:layout_marginBottom="0.0dp" />
     <Button
         p1:text="Confirm"
         p1:layout_width="match_parent"

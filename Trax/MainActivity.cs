@@ -13,6 +13,8 @@ namespace Trax
 
 		protected override void OnCreate(Bundle savedInstanceState)
 		{
+			base.OnCreate(savedInstanceState);
+			SetContentView(Resource.Layout.Main);
 			//The bare minimum resources are initialized before anything else in order to check if the user has given themself a name
 			//As efficiently as possble
 			TextView greeting = FindViewById<TextView>(Resource.Id.greetingTextBox);
@@ -34,8 +36,6 @@ namespace Trax
 			}
 
 			//The rest of the resources and code can run after it's confirmed that the user has set a name
-			base.OnCreate(savedInstanceState);
-			SetContentView(Resource.Layout.Main);
 
 			Button settings = FindViewById<Button>(Resource.Id.settingsButton);
 			Button newInputButton = FindViewById<Button>(Resource.Id.NewInputButton);
