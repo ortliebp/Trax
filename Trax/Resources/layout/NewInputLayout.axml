@@ -45,7 +45,7 @@
     <Button
         p1:text="Confirm"
         p1:layout_width="match_parent"
-        p1:layout_height="wrap_content"
+        p1:layout_height="145.5dp"
         p1:id="@+id/inputConfirmButton"
         p1:background="#ffd32f2f" />
 </LinearLayout>

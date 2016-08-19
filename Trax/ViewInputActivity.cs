@@ -10,7 +10,7 @@ namespace Trax
 	public class ViewInputActivity : Activity
 	{
 		//Eventually we will want what is below to be more secure, but first we need a brute-force method
-		string connectionParam = "server=35.39.32.163;uid=username;port=8889;pwd=password;database=test;";
+		string connectionParam = "server=148.61.177.102;uid=username;port=8889;pwd=password;database=test;";
 		MySqlConnection connection = null;
 		MySqlDataReader dataReader = null;
 
