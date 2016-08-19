@@ -1,10 +1,19 @@
 ﻿<Properties StartupItem="Trax/Trax.csproj">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Trax/NewInputActivity.cs">
     <Files>
       <File FileName="Trax/WhoAreYouPrompt.cs" Line="1" Column="1" />
       <File FileName="Trax/NewInputActivity.cs" Line="38" Column="14" />
       <File FileName="Trax/MainActivity.cs" Line="13" Column="3" />
       <File FileName="Trax/ViewInputActivity.cs" Line="51" Column="36" />
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Trax/ViewDetails.cs">
+    <Files>
+      <File FileName="Trax/MainActivity.cs" Line="35" Column="30" />
+      <File FileName="Trax/WhoAreYouPrompt.cs" Line="1" Column="1" />
+      <File FileName="Trax/ViewInputActivity.cs" Line="1" Column="1" />
+      <File FileName="Trax/ViewDetails.cs" Line="1" Column="1" />
+>>>>>>> master
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

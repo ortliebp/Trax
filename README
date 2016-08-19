@@ -6,6 +6,4 @@ It will be specifically tailored to fit the needs of IT consultants at Grand Val
 Specifications:
 * Built using Xamarin Studio / Visual Studio
 * Visual C#
-* DB for Android + (iOS?)
-
-
+* Remote MySQL DB for Android + (iOS?)
