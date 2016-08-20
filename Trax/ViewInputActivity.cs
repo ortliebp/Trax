@@ -3,6 +3,7 @@ using Android.Content;
 using Android.OS;
 using Android.Widget;
 using MySql.Data.MySqlClient;
+using System;
 
 namespace Trax
 {
@@ -33,31 +34,40 @@ namespace Trax
 			{
 				connection = new MySqlConnection(connectionParam);
 				connection.Open();
-				string stm = "SELECT Name, PO FROM trax"; //String using query syntax
+				string stm = "SELECT Entry, Name, PO FROM trax"; //String using query syntax
 				MySqlCommand cmd = new MySqlCommand(stm, connection); //Query is placed alongside our MySQLConnection object to create a command object
 				dataReader = cmd.ExecuteReader(); //Our data reader which was null is given our new command
 
 				int count = dataReader.FieldCount; //This keeps track of how many items are in the query
 				Button[] ButtonArray = new Button[count];
+				int[] retrievedDataEntry = new int[count];
 				string[] retrievedData = new string[count];
 				string[] retrievedDataPO = new string[count];
+
 				while (dataReader.Read())
 				{
-					for (int i = 0; i < count; i += 2) //Increment by two in order to seperate Names and POs
+					for (int i = 0; i < count; i += 3) //Increment by two in order to seperate Names and POs from Entry
 					{
 						string name; //We need this declared in the loop for the Intent to receive the correct string
-						retrievedData[i] = dataReader.GetString(i); //Names show up in every other index
-						name = retrievedData[i];
-						retrievedData[i + 1] = dataReader.GetString(i + 1); //POs show up in between
-						retrievedDataPO[i + 1] = retrievedData[i + 1]; //Dumps the odd indexes into the PO array
+						int entry;
+
+						retrievedDataEntry[i] = dataReader.GetInt16(i); //Entry numbers show up every three indexes
+						entry = retrievedDataEntry[i];
+
+						retrievedData[i + 1] = dataReader.GetString(i + 1); //Names show up after the Entry
+						name = retrievedData[i + 1];
+
+						retrievedData[i + 2] = dataReader.GetString(i + 2);
+						retrievedDataPO[i + 2] = retrievedData[i + 2]; //Dumps the odd indexes into the PO array
+
 						ButtonArray[i] = new Button(this); //Initializes our buttons. One button every two indexes 
 
-						ButtonArray[i].Text = name + " PO: " + retrievedDataPO[i + 1]; //Combine the even and odd indexes
+						ButtonArray[i].Text = name + " PO: " + retrievedDataPO[i + 2]; //Combine the even and odd indexes
 						linLayView.AddView(ButtonArray[i]); //Adds the buttons to our view
 						ButtonArray[i].Click += delegate
 						{
 							var viewDetails = new Intent(this, typeof(Trax.ViewDetails));
-							viewDetails.PutExtra("MyData", "SELECT Name, PO, IDC FROM trax WHERE Name = '" + name + "'"); //"Confirm" string is sent to whoAreYou activity
+							viewDetails.PutExtra("MyData", "SELECT Name, PO, IDC FROM trax WHERE Entry = '" + entry + "'"); //"Confirm" string is sent to whoAreYou activity
 							StartActivity(viewDetails);
 						};
 					}
