@@ -34,7 +34,7 @@ namespace Trax
 			{
 				connection = new MySqlConnection(connectionParam);
 				connection.Open();
-				string stm = "SELECT Entry, Name, PO FROM trax"; //String using query syntax
+				string stm = "SELECT Entry, Name, PO, Delivered FROM trax"; //String using query syntax
 				MySqlCommand cmd = new MySqlCommand(stm, connection); //Query is placed alongside our MySQLConnection object to create a command object
 				dataReader = cmd.ExecuteReader(); //Our data reader which was null is given our new command
 
@@ -43,13 +43,16 @@ namespace Trax
 				int[] retrievedDataEntry = new int[count];
 				string[] retrievedData = new string[count];
 				string[] retrievedDataPO = new string[count];
+				int[] retrievedDataDelivered = new int[count];
 
 				while (dataReader.Read())
 				{
-					for (int i = 0; i < count; i += 3) //Increment by two in order to seperate Names and POs from Entry
+					for (int i = 0; i < count; i += 4) //Increment by four in order to seperate all of the values from Entry
 					{
 						string name; //We need this declared in the loop for the Intent to receive the correct string
 						int entry;
+						int deliveryStatus;
+
 
 						retrievedDataEntry[i] = dataReader.GetInt16(i); //Entry numbers show up every three indexes
 						entry = retrievedDataEntry[i];
@@ -60,14 +63,17 @@ namespace Trax
 						retrievedData[i + 2] = dataReader.GetString(i + 2);
 						retrievedDataPO[i + 2] = retrievedData[i + 2]; //Dumps the odd indexes into the PO array
 
+						retrievedDataDelivered[i + 3] = dataReader.GetInt16(i + 3);
+						deliveryStatus = retrievedDataDelivered[i + 3];
+
 						ButtonArray[i] = new Button(this); //Initializes our buttons. One button every two indexes 
 
-						ButtonArray[i].Text = name + " PO: " + retrievedDataPO[i + 2]; //Combine the even and odd indexes
+						ButtonArray[i].Text = name + " P" + retrievedDataPO[i + 2] + deliveredOrNot(deliveryStatus); //Combine the even and odd indexes
 						linLayView.AddView(ButtonArray[i]); //Adds the buttons to our view
 						ButtonArray[i].Click += delegate
 						{
 							var viewDetails = new Intent(this, typeof(Trax.ViewDetails));
-							viewDetails.PutExtra("MyData", "SELECT Name, PO, IDC FROM trax WHERE Entry = '" + entry + "'"); //"Confirm" string is sent to whoAreYou activity
+							viewDetails.PutExtra("MyData", Convert.ToString(entry));
 							StartActivity(viewDetails);
 						};
 					}
@@ -93,6 +99,16 @@ namespace Trax
 					connection.Close();
 				}
 			}
+		}
+
+		string deliveredOrNot(int x)
+		{
+			if (x == 1)
+			{
+				return " Delivered";
+			}
+
+			else return "";
 		}
 	}
 }

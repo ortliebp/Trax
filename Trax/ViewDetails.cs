@@ -27,7 +27,8 @@ namespace Trax
 			deliveredButton.SetBackgroundColor(Color.LightGray);
 			notDeliveredButton.SetBackgroundColor(Color.LightGray);
 
-			string customQuery = Intent.GetStringExtra("MyData") ?? "Data not available";
+			string intentCustomQuery = Intent.GetStringExtra("MyData") ?? "Data not available";
+			string customQuery = "SELECT Name, PO, IDC FROM trax WHERE Entry = '" + intentCustomQuery + "'";
 			goBack.Text = customQuery;
 			goBack.Click += delegate
 			{
@@ -45,6 +46,12 @@ namespace Trax
 				notDeliveredButton.SetBackgroundColor(Color.LimeGreen);
 				if (notDelButtonCount >= 2)
 				{
+					string stm = "UPDATE trax SET Delivered = 0 WHERE Entry = '" + intentCustomQuery + "'";
+					connection = new MySqlConnection(connectionParam);
+					connection.Open();
+					MySqlCommand cmd = new MySqlCommand(stm, connection); //Query is placed alongside our MySQLConnection object to create a command object
+					dataReader = cmd.ExecuteReader(); //Our data reader which was null is given our new command
+
 					notDelButtonCount = 0;
 					StartActivity(typeof(MainActivity));
 				}
@@ -61,6 +68,13 @@ namespace Trax
 				deliveredButton.SetBackgroundColor(Color.LimeGreen);
 				if (DelButtonCount >= 2)
 				{
+					string stm = "UPDATE trax SET Delivered = 1 WHERE Entry = '" + intentCustomQuery + "'";
+						
+					connection = new MySqlConnection(connectionParam);
+					connection.Open();
+					MySqlCommand cmd = new MySqlCommand(stm, connection); //Query is placed alongside our MySQLConnection object to create a command object
+					dataReader = cmd.ExecuteReader(); //Our data reader which was null is given our new command
+
 					DelButtonCount = 0;
 					StartActivity(typeof(MainActivity));
 				}
