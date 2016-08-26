@@ -20,7 +20,7 @@ namespace Trax
 			base.OnCreate(savedInstanceState);
 			SetContentView(Resource.Layout.ViewInputLayout);
 			Button goBack = FindViewById<Button>(Resource.Id.GoBackButton);
-			LinearLayout linLayView = FindViewById<LinearLayout>(Resource.Id.linearLayoutView);
+			ScrollView btnScrollView = FindViewById<ScrollView>(Resource.Id.buttonScrollView);
 			goBack.Text = "Go Back";
 
 			goBack.Click += (sender, e) =>
@@ -53,7 +53,6 @@ namespace Trax
 						int entry;
 						int deliveryStatus;
 
-
 						retrievedDataEntry[i] = dataReader.GetInt16(i); //Entry numbers show up every three indexes
 						entry = retrievedDataEntry[i];
 
@@ -69,7 +68,7 @@ namespace Trax
 						ButtonArray[i] = new Button(this); //Initializes our buttons. One button every two indexes 
 
 						ButtonArray[i].Text = name + " P" + retrievedDataPO[i + 2] + deliveredOrNot(deliveryStatus); //Combine the even and odd indexes
-						linLayView.AddView(ButtonArray[i]); //Adds the buttons to our view
+						btnScrollView.AddView(ButtonArray[i]); //Adds the buttons to our view
 						ButtonArray[i].Click += delegate
 						{
 							var viewDetails = new Intent(this, typeof(Trax.ViewDetails));
@@ -83,7 +82,7 @@ namespace Trax
 			catch (MySqlException error) //If at any point there's a connection or query error, we want to know what exactly is going on
 			{
 				Button errorButton = new Button(this);
-				linLayView.AddView(errorButton);
+				btnScrollView.AddView(errorButton);
 				errorButton.Text = "Error: {0}" + error;
 			}
 
@@ -107,7 +106,6 @@ namespace Trax
 			{
 				return " Delivered";
 			}
-
 			else return "";
 		}
 	}

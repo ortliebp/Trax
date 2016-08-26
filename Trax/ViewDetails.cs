@@ -28,7 +28,7 @@ namespace Trax
 			notDeliveredButton.SetBackgroundColor(Color.LightGray);
 
 			string intentCustomQuery = Intent.GetStringExtra("MyData") ?? "Data not available";
-			string customQuery = "SELECT Name, PO, IDC FROM trax WHERE Entry = '" + intentCustomQuery + "'";
+			string customQuery = "SELECT Name, Location, Description, Delivered, PO, IDC FROM trax WHERE Entry = '" + intentCustomQuery + "'";
 			goBack.Text = customQuery;
 			goBack.Click += delegate
 			{
