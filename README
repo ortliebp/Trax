@@ -1,9 +1,0 @@
----- @Authors: Pierce J. Ortlieb + David Crawford ----
-                  --/ Trax \--
-Trax is a lightweight inventory tracking application built using C#. 
-It will be specifically tailored to fit the needs of IT consultants at Grand Valley State University.
-
-Specifications:
-* Built using Xamarin Studio / Visual Studio
-* Visual C#
-* Remote MySQL DB for Android + (iOS?)
