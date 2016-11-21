@@ -5,6 +5,8 @@ It will be specifically tailored to fit the needs of IT consultants at Grand Val
 
 #Build Status
 
+[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/496/badge)](https://bestpractices.coreinfrastructure.org/projects/496)
+
 **Master** - [![Build Status](https://www.bitrise.io/app/37d41c6e064c59e3.svg?token=CAncVAb6OIibBnQVHi-veA&branch=master)](https://www.bitrise.io/app/37d41c6e064c59e3)
 
 **David** - [![Build Status](https://www.bitrise.io/app/37d41c6e064c59e3.svg?token=CAncVAb6OIibBnQVHi-veA&branch=david)](https://www.bitrise.io/app/37d41c6e064c59e3)
